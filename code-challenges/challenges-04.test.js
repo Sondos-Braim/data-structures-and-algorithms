@@ -56,10 +56,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 const isCapitalized = (str) => {
   var arr = [];
-  var pattern = /\b[A-Z].*?\b/g;
+  var pattern = /\b[A-Z]\w*\b/g;
   if (str.match(pattern)) {
     arr = str.match(pattern);
-    console.log(str.match(pattern));
   }
   return arr;
 };
@@ -73,7 +72,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 const citiesAtoJ = (arr) => {
   // Solution code here...
   var newArr = [];
-  var pattern = /^[A-J]\S+$/g;
+  var pattern = /^[A-J]\.*/;
   arr.forEach(element => {
     if (element.match(pattern)) {
       newArr.push(element);
