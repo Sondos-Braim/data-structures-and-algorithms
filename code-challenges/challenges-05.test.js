@@ -43,8 +43,9 @@ const templateWithJQuery = () => {
     section.find('h2').text(element.name);
     section.find('h3').text(element.height);
     section.find('p').text(element.eye_color);
-    $('section:nth-child(4) p').text('red');
+    // $('section:nth-child(4) p').text('red');
     $('main').append(section);
+    section.removeAttr('id');
   });
 };
 
