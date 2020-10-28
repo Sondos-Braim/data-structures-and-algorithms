@@ -20,7 +20,7 @@ Next, write a function named getCurrentEvents that takes in the request and resp
 ------------------------------------------------------------------------------------------------ */
 
 
-// Express sever here
+// Express sever here:
 const createServer = () => {
   const express = require('express');
   const app = express();
