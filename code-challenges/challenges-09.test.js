@@ -20,7 +20,7 @@ Next, write a function named getCurrentEvents that takes in the request and resp
 ------------------------------------------------------------------------------------------------ */
 
 
-// Express sever here
+// Express sever here:
 const createServer = () => {
   const express = require('express');
   const app = express();
@@ -166,7 +166,7 @@ function getCurrentEvents(request, response) {
 const mapCurrentEvents = () => {
   // Solution code here...
   let event= currentEvents.news.map(data => {
-    let newObj = new Event(event);
+    let newObj = new Event(data);
     return newObj;
   });
   return event;
@@ -178,7 +178,7 @@ function Event(obj) {
   this.categories=obj.category;
   this.summary=obj.description;
   this.img_url=obj.image;
-  this.date=obj.published;
+  this.date=obj.published.split('',1);
   this.title=obj.title;
 }
 
